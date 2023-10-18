@@ -9,6 +9,10 @@
     width: 100px;
 }
 
+* ul {
+    list-style: none;
+}
+
 .header {
     background-color: aqua;
     display: flex;
@@ -63,9 +67,12 @@ section .content .productContent {
 section .content .productContent .productList .products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
     width: 100%;
     padding: 0px 50px 0 50px;
+}
+
+section .aside #closeIcon {
+    display: none;
 }
 
 section .aside table {
@@ -153,7 +160,69 @@ section .aside table button {
     }
 }
 
+@media screen and (max-width: 475px) {
+    * .contentImage{
+        height: 70px;
+        width: 70px;
+    }
+
+    section .aside {
+        display: none;
+    }
+
+    section .content {
+        width: 100vw;
+    }
+
+    .productContent .productList .products .productDetail {
+        gap: 10px;
+    }
+
+    .item-count-badge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+        line-height: 1;
+        pointer-events: none; /* To ensure it doesn't interfere with clicking the SVG */
+    }
+    
+    section .aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        z-index: 1;
+        display: none;
+        overflow-y: auto;
+    }
+
+    section .aside #closeIcon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    section .aside.show {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 320px) {
+
+    section .aside {
+        display: none;
+    }
+
     .productContent .productList .products {
         flex-direction: column;
     }

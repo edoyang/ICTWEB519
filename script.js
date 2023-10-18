@@ -26,6 +26,7 @@ function addToCart(price, productName) {
     // Update the UI
     document.querySelector('#cartTotal').textContent = `Cart sub-total: $${total}`;
     document.querySelector('#itemCount').textContent = `${itemCount} items`;
+    document.querySelector('#itemCountBadge').textContent = itemCount;
 }
 
 // Add event listeners to all "Add to Cart" buttons
@@ -58,3 +59,18 @@ function resetCart() {
     document.querySelector('#itemCount').textContent = `${itemCount} items`;
     document.querySelector('#purchasedItemsList').innerHTML = '';
 }
+
+document.getElementById("floatingSVG").addEventListener("click", function() {
+    const aside = document.querySelector(".aside");
+    
+    if (aside.classList.contains("show")) {
+        aside.classList.remove("show");
+    } else {
+        aside.classList.add("show");
+    }
+});
+
+document.getElementById("closeIcon").addEventListener("click", function() {
+    const aside = document.querySelector(".aside");
+    aside.classList.remove("show");
+});
