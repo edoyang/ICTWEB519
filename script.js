@@ -27,6 +27,7 @@ function addToCart(price, productName) {
     document.querySelector('#cartTotal').textContent = `Cart sub-total: $${total}`;
     document.querySelector('#itemCount').textContent = `${itemCount} items`;
     document.querySelector('#itemCountBadge').textContent = itemCount;
+    
 }
 
 // Add event listeners to all "Add to Cart" buttons
@@ -57,6 +58,7 @@ function resetCart() {
     itemCount = 0;
     document.querySelector('#cartTotal').textContent = `Cart sub-total: $${total}`;
     document.querySelector('#itemCount').textContent = `${itemCount} items`;
+    document.querySelector('#itemCountBadge').textContent = '0';  // Added this line
     document.querySelector('#purchasedItemsList').innerHTML = '';
 }
 

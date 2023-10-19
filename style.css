@@ -29,7 +29,6 @@
 .navbar {
     border: none;
     box-shadow: none;
-    width: 100vw;
 }
 
 .navbar .menu {
@@ -69,6 +68,12 @@ section .content .productContent .productList .products {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     padding: 0px 50px 0 50px;
+    gap: 100px;
+}
+
+section .content .productContent .productList .products .productDetail {
+    background-color: lightgray;
+    border-radius: 10px;
 }
 
 section .aside #closeIcon {
@@ -113,6 +118,10 @@ section .aside table button {
     font-size: 24px;
 }
 
+#floatingSvg {
+    display: none;
+}
+
 /* Product Page */
 
 .productContent {
@@ -134,7 +143,6 @@ section .aside table button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100vw;
 }
 
 .productContent .productList .products .productDetail {
@@ -161,7 +169,7 @@ section .aside table button {
 }
 
 @media screen and (max-width: 475px) {
-    * .contentImage{
+    * .contentImage {
         height: 70px;
         width: 70px;
     }
@@ -174,23 +182,44 @@ section .aside table button {
         width: 100vw;
     }
 
+    section .content .productContent .productList .products {
+        gap: 10px;
+        padding: 0;
+    }
+
     .productContent .productList .products .productDetail {
         gap: 10px;
+        padding: 10px 0 10px 0;
+    }
+
+    #floatingSvg {
+        position: fixed;
+        display: block;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #floatingSvg > svg {
+        width: 100%;
+        height: 100%;
     }
 
     .item-count-badge {
         position: absolute;
-        top: -5px;
-        right: -10px;
+        top: 0;
+        right: 0;
         background-color: red;
         color: white;
         border-radius: 50%;
         padding: 2px 6px;
         font-size: 12px;
         line-height: 1;
-        pointer-events: none; /* To ensure it doesn't interfere with clicking the SVG */
+        pointer-events: none;
+        transform: translate(50%, -50%);
     }
-    
+
     section .aside {
         position: fixed;
         top: 0;
