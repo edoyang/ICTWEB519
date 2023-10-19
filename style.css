@@ -76,6 +76,10 @@ section .content .productContent .productList .products .productDetail {
     border-radius: 10px;
 }
 
+section .content .addToCart{
+    bottom: 0px;
+}
+
 section .aside #closeIcon {
     display: none;
 }
