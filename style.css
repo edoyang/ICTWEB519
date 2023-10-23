@@ -169,6 +169,7 @@ section .aside table button {
 
 .productContent .productList .products .productDetail {
     display: flex;
+    width: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -309,7 +310,6 @@ section .aside table button {
     }
 
     section .aside {
-        position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
