@@ -71,7 +71,7 @@ section .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dominant)
+    color: black;
 }
 
 section .content .productContent {
@@ -87,7 +87,7 @@ section .content .productContent .productList .products {
 }
 
 section .content .productContent .productList .products .productDetail {
-    background-color: var(--dominant);
+    background-color: var(--secondary);
     border-radius: 10px;
 }
 
