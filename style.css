@@ -87,7 +87,7 @@ section .content .productContent .productList .products {
 }
 
 section .content .productContent .productList .products .productDetail {
-    background-color: var(--secondary);
+    background-color: var(--dominant);
     border-radius: 10px;
 }
 
